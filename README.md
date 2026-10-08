@@ -1,8 +1,8 @@
 # KrishiNet-VLM: Complete Model Card & Documentation
 
-**Copy this entire file as `MODEL_CARD.md`. Replace only the placeholders marked in the Contact section at the end.**
 
----
+
+
 
 ```markdown
 # KrishiNet-VLM Model Card
