@@ -1,3 +1,16 @@
+<img width="1664" height="928" alt="architecture" src="https://github.com/user-attachments/assets/e6b76808-43ce-4052-bab1-1b19c4a51a7a" />
+<img width="1275" height="817" alt="12_cumulative_coverage" src="https://github.com/user-attachments/assets/2f039e20-d46b-4fef-970b-790da94e2210" />
+<img width="1786" height="1094" alt="11_stacked_correct_wrong" src="https://github.com/user-attachments/assets/138cd4bf-5c88-486d-905a-d7e87c359300" />
+<img width="1507" height="925" alt="10_overall_metrics_bar" src="https://github.com/user-attachments/assets/b770953c-b428-40bf-8abf-149231d77007" />
+<img width="2164" height="1993" alt="09_confusion_matrix_normalized" src="https://github.com/user-attachments/assets/91ba0a55-e967-48a5-977a-9053accfceec" />
+<img width="1285" height="1048" alt="08_precision_recall_curves" src="https://github.com/user-attachments/assets/f2ebcd76-52c5-44f7-a1ca-c2ccb57e9241" />
+<img width="1285" height="1048" alt="07_roc_curves" src="https://github.com/user-attachments/assets/a1934bea-ec1d-4924-8ec8-5ecba7b64b60" />
+<img width="2019" height="973" alt="06_precision_recall_f1_bar" src="https://github.com/user-attachments/assets/3ca04ee5-1802-47ce-bd86-b1cca687409c" />
+<img width="1854" height="973" alt="05_per_class_accuracy_bar" src="https://github.com/user-attachments/assets/cadde5b1-02f5-4eaa-bf8e-6d750cb3879a" />
+<img width="1329" height="1131" alt="04_validation_class_pie" src="https://github.com/user-attachments/assets/df8d20e0-9085-4435-abe3-94126a262366" />
+<img width="1178" height="1131" alt="03_outcome_pie_chart" src="https://github.com/user-attachments/assets/08466358-3cc0-450b-a318-bc144998dcff" />
+<img width="1261" height="817" alt="02_training_samples_histogram" src="https://github.com/user-attachments/assets/b80f58e8-5dfc-41f5-9763-c58300dacf4f" />
+<img width="1268" height="817" alt="01_per_class_accuracy_histogram" src="https://github.com/user-attachments/assets/214b6545-410e-4a54-a297-4637ab215faf" />
 # KrishiNet-VLM-500M-PlantVillage
 
 <p align="center">
