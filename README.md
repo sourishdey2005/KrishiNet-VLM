@@ -575,3 +575,4 @@ Recommended: treat any output without a parseable disease name as `unknown` and 
 ## 12. License
 
 Apache License 2.0. See the base model's license (`HuggingFaceTB/SmolVLM-500M-Instruct`) for upstream terms.
+
