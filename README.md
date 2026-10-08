@@ -157,7 +157,7 @@ Identify the plant disease in this image.
 KrishiNet-VLM is built on the SmolVLM-500M-Instruct architecture with two components: a vision pathway (SigLIP + projector) and a language pathway (SmolLM2-360M).
 
 <p align="center">
-  <img src="architecture.png" alt="KrishiNet-VLM end-to-end architecture: leaf image to SigLIP vision encoder to Q8_0 vision projector (mmproj) to SmolLM2-360M language decoder to structured Plant/Disease/Symptoms output" width="900">
+  <img src="https://github.com/user-attachments/assets/e6b76808-43ce-4052-bab1-1b19c4a51a7a" alt="KrishiNet-VLM end-to-end architecture: leaf image to SigLIP vision encoder to Q8_0 vision projector (mmproj) to SmolLM2-360M language decoder to structured Plant/Disease/Symptoms output" width="900">
 </p>
 
 *Figure 13: KrishiNet-VLM end-to-end architecture. A leaf image is encoded by the SigLIP vision encoder (93M), projected into the language token space by the Q8_0 multimodal projector (mmproj), and consumed by the SmolLM2-360M decoder, which — conditioned on the raw prompt "Identify the plant disease in this image." — emits the structured `**Plant:** / **Disease:** / **Symptoms:**` response. LoRA adapters (9.57M, 1.85%) are merged into the Q4_K_M language weights before export; the full pipeline runs CPU-only and fully offline.*
@@ -230,19 +230,19 @@ KrishiNet-VLM is built on the SmolVLM-500M-Instruct architecture with two compon
 Preprocessing: resize/crop to 512×512 patches, standard normalization.
 
 <p align="center">
-  <img src="02_training_samples_histogram.png" alt="Histogram of training samples per class after balancing" width="750">
+  <img src="https://github.com/user-attachments/assets/b80f58e8-5dfc-41f5-9763-c58300dacf4f" alt="Histogram of training samples per class after balancing" width="750">
 </p>
 
 *Figure 2: Distribution of training samples per class after balancing. The x-axis shows samples per class; the y-axis shows how many classes fall into each bin. The red dashed line marks the mean (195.4 samples/class); the orange dotted line marks the median (120 samples/class).*
 
 <p align="center">
-  <img src="04_validation_class_pie.png" alt="Pie chart of validation set class distribution" width="560">
+  <img src="https://github.com/user-attachments/assets/df8d20e0-9085-4435-abe3-94126a262366" alt="Pie chart of validation set class distribution" width="560">
 </p>
 
 *Figure 4: Class distribution in the validation set (top 10 classes plus an aggregated "other" category). The healthy class dominates at approximately 30% of validation samples, reflecting the natural prevalence of healthy leaves in the PlantVillage dataset.*
 
 <p align="center">
-  <img src="12_cumulative_coverage.png" alt="Cumulative class coverage curve" width="700">
+  <img src="https://github.com/user-attachments/assets/2f039e20-d46b-4fef-970b-790da94e2210" alt="Cumulative class coverage curve" width="700">
 </p>
 
 *Figure 12: Cumulative class coverage curve. Classes are sorted by validation frequency (descending). The red dashed line marks 80% cumulative coverage; the orange dotted line marks 95%. Approximately 6 classes account for 80% of validation samples, confirming a long-tailed distribution.*
@@ -327,7 +327,7 @@ Evaluation protocol: **300 held-out images**, single-image inference, prompt `Id
 | Parse failures | 66 / 300 (22.0%) |
 
 <p align="center">
-  <img src="10_overall_metrics_bar.png" alt="Bar chart summarizing all headline evaluation metrics" width="800">
+  <img src="https://github.com/user-attachments/assets/b770953c-b428-40bf-8abf-149231d77007" alt="Bar chart summarizing all headline evaluation metrics" width="800">
 </p>
 
 *Figure 10: Summary of all headline metrics. Bars are color-coded: green (≥ 85%), orange (70–85%), red (< 70%). The two accuracy numbers (69.33% end-to-end, 88.89% parseable) reflect the parser-failure phenomenon discussed in §4.2.*
@@ -342,7 +342,7 @@ Two accuracy numbers are reported for scientific honesty:
 | **88.89%** | Accuracy on outputs containing a valid disease name | Model capability metric |
 
 <p align="center">
-  <img src="03_outcome_pie_chart.png" alt="Pie chart of prediction outcomes: correct, wrong-class, parse failure" width="560">
+  <img src="https://github.com/user-attachments/assets/08466358-3cc0-450b-a318-bc144998dcff" alt="Pie chart of prediction outcomes: correct, wrong-class, parse failure" width="560">
 </p>
 
 *Figure 3: Breakdown of prediction outcomes across 300 evaluation samples. Correct predictions are shown in green, wrong-class predictions in red, and parse failures in orange. The 22% parse-failure rate is the dominant source of error and is analyzed further in §4.5.*
@@ -372,19 +372,19 @@ Two accuracy numbers are reported for scientific honesty:
 | Tomato yellow leaf curl virus | 36.4% | 11 | Parse failure |
 
 <p align="center">
-  <img src="05_per_class_accuracy_bar.png" alt="Per-class disease accuracy sorted ascending with sample support" width="860">
+  <img src="https://github.com/user-attachments/assets/cadde5b1-02f5-4eaa-bf8e-6d750cb3879a" alt="Per-class disease accuracy sorted ascending with sample support" width="860">
 </p>
 
 *Figure 5: Per-class disease accuracy sorted in ascending order. Bar colors: red (< 50%), orange (50–75%), green (≥ 75%). The black dashed vertical line marks the overall end-to-end accuracy (69.33%). Sample support (n) is annotated next to each bar.*
 
 <p align="center">
-  <img src="06_precision_recall_f1_bar.png" alt="Per-class precision, recall, and F1 scores" width="860">
+  <img src="https://github.com/user-attachments/assets/3ca04ee5-1802-47ce-bd86-b1cca687409c" alt="Per-class precision, recall, and F1 scores" width="860">
 </p>
 
 *Figure 6: Per-class precision (blue), recall (orange), and F1 score (green). Classes with high precision but low recall (e.g., bacterial spot, powdery mildew) indicate the model is conservative — it only predicts when confident, but misses many positive cases.*
 
 <p align="center">
-  <img src="01_per_class_accuracy_histogram.png" alt="Histogram of per-class accuracy across 21 classes" width="750">
+  <img src="https://github.com/user-attachments/assets/214b6545-410e-4a54-a297-4637ab215faf" alt="Histogram of per-class accuracy across 21 classes" width="750">
 </p>
 
 *Figure 1: Histogram of per-class accuracy across all 21 classes. The bimodal distribution (peak at 0–10% and peak at 90–100%) shows that the model performs either very well or very poorly on each class, with few classes in between.*
@@ -429,13 +429,13 @@ Two accuracy numbers are reported for scientific honesty:
 The macro AUC of 0.9317 is the strongest single metric in this evaluation. It demonstrates that the model's internal hidden states cleanly separate disease classes even when text output is malformed.
 
 <p align="center">
-  <img src="07_roc_curves.png" alt="ROC curves for the top 15 classes with macro AUC" width="750">
+  <img src="https://github.com/user-attachments/assets/a1934bea-ec1d-4924-8ec8-5ecba7b64b60" alt="ROC curves for the top 15 classes with macro AUC" width="750">
 </p>
 
 *Figure 7: ROC curves (one-vs-rest) for the top 15 classes by AUC. The black dashed diagonal represents random chance. Curves closer to the top-left corner indicate better class separability. Macro AUC = 0.9317.*
 
 <p align="center">
-  <img src="08_precision_recall_curves.png" alt="Precision-recall curves for the top 15 classes with average precision" width="750">
+  <img src="https://github.com/user-attachments/assets/f2ebcd76-52c5-44f7-a1ca-c2ccb57e9241" alt="Precision-recall curves for the top 15 classes with average precision" width="750">
 </p>
 
 *Figure 8: Precision-Recall curves for the top 15 classes. Each curve is labeled with its average precision (AP). PR curves are more informative than ROC for imbalanced datasets, where class frequencies vary by up to 12×.*
@@ -460,13 +460,13 @@ The macro AUC of 0.9317 is the strongest single metric in this evaluation. It de
 **Key observation:** 66 of 93 errors (71%) are `unknown` outputs. When predictions are produced, they are largely correct.
 
 <p align="center">
-  <img src="09_confusion_matrix_normalized.png" alt="Row-normalized confusion matrix across 23 label categories" width="950">
+  <img src="https://github.com/user-attachments/assets/91ba0a55-e967-48a5-977a-9053accfceec" alt="Row-normalized confusion matrix across 23 label categories" width="950">
 </p>
 
 *Figure 9: Row-normalized confusion matrix across all 23 label categories (21 diseases + unknown + one unused). Cell values represent the fraction of true-class samples predicted as each class. Strong diagonal (values near 1.0) indicates correct classification. Off-diagonal mass in the "unknown" column reflects the parse-failure phenomenon.*
 
 <p align="center">
-  <img src="11_stacked_correct_wrong.png" alt="Stacked per-class bar chart of correct, wrong-class, and parse-failure predictions" width="860">
+  <img src="https://github.com/user-attachments/assets/138cd4bf-5c88-486d-905a-d7e87c359300" alt="Stacked per-class bar chart of correct, wrong-class, and parse-failure predictions" width="860">
 </p>
 
 *Figure 11: Per-class prediction breakdown. Green = correct, red = wrong class, orange = parse failure. The long orange bars for northern leaf blight, cercospora leaf spot, and tomato yellow leaf curl virus visualize where the parser fails most often.*
