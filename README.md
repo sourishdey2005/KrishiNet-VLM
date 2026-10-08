@@ -484,6 +484,8 @@ The macro AUC of 0.9317 is the strongest single metric in this evaluation. It de
 | `smolvlm-plantvillage-Q4_K_M.gguf` | Main language model | Q4_K_M | ~289–303 MB |
 | `mmproj-smolvlm-Q8_0.gguf` | Vision projector | Q8_0 | ~104–109 MB |
 | **Total** | — | — | **~393 MB** |
+> **Download:** model files (GGUF) are distributed via the [v1.0 GitHub Release](https://github.com/sourishdey2005/KrishiNet-VLM/releases/tag/v1.0) — they exceed GitHub's 100 MB per-file repository limit.
+
 
 ### 5.2 Android (Flutter / mt_llmkit)
 
